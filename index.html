@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side (Card Box) -->
+    <div class="left-container">
+        <div class="sidebar">
+            <h1>Hey there, I'm Adrian! 👋</h1>
+            <p><span class="typewriter-text">A <strong>Computer Engineer</strong> with a foundation in electronics, 
+              <strong>front-end development, networking, and game development.</strong> I have hands-on experience in
+              <strong>designing basic electronic systems, creating responsive user interfaces, working with
+              networked applications, and building engaging game environments.</strong></span></p>
+              <button class="hire-me" onclick="scrollToContact()">Hire Me</button>
+
+        </div>
+    </div>
+    
+    <!-- Scrollable Right Content -->
+    <div class="content">
+        <section>
+            <h2>Experiences</h2>
+            <div class="experience-card">
+              <i class="fas fa-database experience-icon"></i>
+              <div>
+                <h3>Senior Highschool Work Immersion</h3>
+                <h4>RCVJ Inc. | Data Encoder</h4>
+                <p>I gained practical experience in <strong>organizing documents</strong>, encoding data accurately using <strong>Microsoft Excel</strong>, and assisting with basic tax computations. 
+                    This opportunity helped me develop skills in <strong>attention to detail</strong>, <strong>time management</strong>, 
+                    and <strong>teamwork</strong>, while also learning the importance of maintaining organized and efficient workflows.</p>
+              </div>
+            </div>
+            <div class="experience-card">
+              <i class="fas fa-cogs experience-icon"></i>
+              <div>
+                <h3>College | On the Job Training</h3>
+                <h4>CEDEZCO INDUSTRIAL CONTROL INC. | Machine Operator Assistant</h4>
+                <p>I assisted engineers in preparing materials like <strong>cable markers</strong> and <strong>wiring</strong> for panel installations. Initially, I contributed to the company's
+                    branding by designing a <strong>logo</strong> and <strong>web design</strong>. This role helped me develop <strong>technical</strong>, <strong>creative</strong>, and <strong>teamwork</strong> skills while adapting to varying project demands.</p>
+              </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>Skills</h2>
+            <div class="experience-card">
+              <i class="fas fa-code experience-icon"></i>
+              <div>
+                <h3>Technical Skills</h3>
+                <p><strong>Programming Languages:</strong> HTML, CSS, JavaScript, PHP, C++, Java, Visual Basic</p>
+                <p><strong>Web Development:</strong> Responsive UI Design, Front-End Development</p>
+                <p><strong>Embedded Systems:</strong> Microcontrollers (Arduino), Circuit Design</p>
+                <p><strong>Game Development:</strong> Godot Engine, GDScript</p>
+                <p><strong>Networking:</strong> Basic Network Configuration, Cisco Troubleshooting</p>
+                <p><strong>Databases:</strong> MySQL</p>
+                <p><strong>3D Modelling & Animation:</strong> Blender (Character Rigging, Bone Setup, Keyframe Animation)</p>
+              </div>
+            </div>
+        </section>
+
+        <!-- Game Projects Section -->
+        <section>
+            <h2>Hobbies</h2>
+            <h3>Game Development</h3>
+            <div class="video-container">
+                <div class="video-box">
+                    <video controls>
+                        <source src="videos/Cave.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><strong>Cave Exploring:</strong> When you die, you will be sent to another world with a cave, where you'll find dead poets and random items that you can collect upon respawning.</p>
+                </div>
+                <div class="video-box">
+                    <video controls>
+                        <source src="videos/fighting.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><strong>World:</strong> The game is not yet finished, but here's a sample video. I added Ghibli-style grass and a tree, along with simple HP and energy bars.</p>
+                </div>
+            </div>
+        
+            <!-- New Section for T-Shirt Designs -->
+            <h3>T-Shirt Designs</h3>
+            <div class="tshirt-container">
+                <div class="tshirt-box">
+                    <img src="images/4peeps tshirt.jpg" alt="T-Shirt Design 1">
+                    <p><strong>LazyWonk:</strong> Clothing brand name</p>
+                </div>
+                <div class="tshirt-box">
+                    <img src="images/DbtEvrythngTee.png" alt="T-Shirt Design 2">
+                    <p><strong>Doubt Everything:</strong> Descartes' Meditations</p>
+                </div>
+                <div class="tshirt-box">
+                    <img src="images/IWDCLL.png" alt="T-Shirt Design 3">
+                    <p><strong>Dog Lover:</strong> Me with my pocketbully</p>
+                </div>
+            </div>
+        </section>
+<!-- Social Media Section -->
+<section id="contact">
+    <h2>Connect with Me</h2>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/adrianflor/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/2ez4adrizzy/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:21cpe.adrian@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+</section>
+
+
+<!-- FontAwesome for Icons (Add to your HTML <head>) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+        
+  
+</div> <!-- Closing .content -->
+</div> <!-- Closing .container -->
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Typewriter Effect
+      const textElement = document.querySelector(".typewriter-text");
+      if (textElement) {
+        const text = textElement.innerHTML; 
+        textElement.innerHTML = ""; 
+        let i = 0;
+      
+        function typeWriter() {
+          if (i < text.length) {
+            textElement.innerHTML = text.substring(0, i + 1);
+            i++;
+            setTimeout(typeWriter, 10);
+          }
+        }
+        setTimeout(typeWriter, 1000);
+      }
+    
+      // Scroll to Contact & Highlight Effect
+      window.scrollToContact = function () {
+        let contactSection = document.getElementById("contact");
+    
+        if (contactSection) {
+          // Smooth Scroll to Contact Section
+          contactSection.scrollIntoView({ behavior: "smooth" });
+    
+          // Highlight Effect
+          contactSection.style.transition = "background-color 0.5s ease-in-out";
+          contactSection.style.backgroundColor = "#1f3a68"; // Temporary highlight color
+    
+          // Remove Highlight After 1 Second
+          setTimeout(() => {
+            contactSection.style.backgroundColor = ""; // Reset to default
+          }, 1000);
+        }
+      };
+    });
+    </script>
+    
+</body>
+</html>
