@@ -354,3 +354,63 @@ body {
     font-size: 20px;
   }
 }
+/* Tablet View */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    overflow-y: visible;
+  }
+
+  .experience-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-icon {
+    margin-top: 0;
+  }
+
+  .video-container, .tshirt-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-box, .tshirt-box {
+    width: 100%;
+    max-width: none;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
